@@ -37,28 +37,28 @@ $gutter:                36px;
   position: fixed;
   max-width: 1280px;
   margin: 0 auto;
-}
 
-.headroom {
-  transition: all 200ms ease-in-out;
-  z-index: 10;
-  right: 0;
-  left: 0;
-  top: 0;
-}
+  &.headroom {
+    transition: all 200ms ease-in-out;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
 
-.headroom--top {
-  position: static;  
-}
+  &.headroom--top {
+    position: static;  
+  }
 
-.headroom--pinned {
-  transform: translateY(0%);
-  -webkit-transform: translateY(0%);
-}
+  &.headroom--pinned {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
 
-.headroom--unpinned {
-  transform: translateY(-100%);
-  -webkit-transform: translateY(-100%);
+  &.headroom--unpinned {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+  }
 }
 
 // @ PANELS: GENERAL
