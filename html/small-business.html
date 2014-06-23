@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <title>Subscribe Promo - Small Business - Econsultancy</title>
     <link rel="shortcut icon" href="../ux.econsultancy.com/static/images/favicon.png"/>
-    <link rel="stylesheet" href="../ux.econsultancy.com/static/css/ui.css">
+    <link rel="stylesheet" href="../ux.econsultancy.com/static/css/ui.css">    
     <script src="../ux.econsultancy.com/static/js/vendor/modernizr.js"></script>
     <script src="../ux.econsultancy.com/static/js/vendor/jquery.js"></script>
     <script src="../ux.econsultancy.com/static/js/vendor/angular.js"></script>
@@ -16,6 +16,11 @@
     <script src="../ux.econsultancy.com/static/js/vendor/ui-bootstrap.js"></script>
     <script src="../ux.econsultancy.com/static/js/vendor/angular-debounce.js"></script>
     <script src="../ux.econsultancy.com/static/js/ui.js"></script>
+
+    <link rel="stylesheet" href="../css/subscribe.css">
+    <script src="../js/headroom.min.js"></script>
+    <script src="../js/jquery.headroom.min.js"></script>
+    <script src="../js/subscribe.js"></script>
   </head>
   <body ng-app="ux">
 
@@ -23,10 +28,17 @@
       
       <div class="subscribe-promo -small-business">
 
+        <nav navbar headroom class="navbar subscribe-navbar">
+          <a href="/" class="navbar-logo">
+            <img src="../ux.econsultancy.com/static/images/econsultancy-logo.png" width="164" height="48" alt="Econsultancy logo" class="img--center">
+          </a>
+        </nav>
+
         <section class="subscribe-panel -intro">
-          <h1>Start your Small Business subscription from just <span class="price">£495</span> per year</h1>
+          <p><i class="flaticon stroke briefcase-1 highlighted"></i></p>
+          <h1>Start your Small Business subscription from just <span class="highlighted">£495</span> per year</h1>
           <h3>Strategic insights. Expert analysis. Data at your fingertips.</h3>
-          <p><a class="button" href="#">Buy Small Business subscription</a></p>
+          <p><a class="btn -large" href="#">Buy Small Business subscription</a></p>
         </section>
         
         <section class="subscribe-panel -benefits">
@@ -36,7 +48,7 @@
         <section class="subscribe-panel -upgrade">
           <h2>Get even more with an Enterprise Subscription</h2>
           <p class="subheading">Want to know what you're missing out on?</p>
-          <p><a class="button" href="#">Shome Me</a></p>
+          <p><a class="btn" href="#">Show Me</a></p>
         </section>
         
         <section class="subscribe-panel -goals">

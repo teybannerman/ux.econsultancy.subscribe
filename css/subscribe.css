@@ -1,0 +1,50 @@
+.subscribe-panel:nth-child(even) {
+  background: #f4f5f0; }
+
+.subscribe-panel h3 {
+  font-family: 'bulomedium';
+  font-weight: normal; }
+
+.subscribe-navbar {
+  position: fixed;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.headroom {
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0; }
+
+.headroom--top {
+  position: static; }
+
+.headroom--pinned {
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%); }
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%); }
+
+.subscribe-promo.-small-business .highlighted {
+  color: #949b6f; }
+.subscribe-promo.-enterprise .highlighted {
+  color: #3faca7; }
+
+.subscribe-panel {
+  padding: 36px;
+  border-bottom: 1px solid #e7e7e7;
+  text-align: center; }
+  .subscribe-panel h1 {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto; }
+  .subscribe-panel h3 {
+    color: #585856;
+    margin-bottom: 36px; }
+  .subscribe-panel.-intro p {
+    margin-bottom: 0; }
+  .subscribe-panel.-intro i {
+    font-size: 66px; }
