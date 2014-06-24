@@ -5,6 +5,10 @@
   font-family: 'bulomedium';
   font-weight: normal; }
 
+.subscribe-panel h2 {
+  font-family: 'buloblack';
+  font-weight: normal; }
+
 .subscribe-navbar {
   position: fixed;
   max-width: 1280px;
@@ -28,6 +32,8 @@
   color: #949b6f; }
 .subscribe-promo.-enterprise .highlighted {
   color: #3faca7; }
+.subscribe-promo .btn--large {
+  font-size: 18px; }
 
 .subscribe-panel {
   padding: 36px;
@@ -37,10 +43,43 @@
     max-width: 840px;
     margin-left: auto;
     margin-right: auto; }
+  .subscribe-panel h2 {
+    font-size: 36px;
+    line-height: 42px; }
   .subscribe-panel h3 {
     color: #585856;
-    margin-bottom: 36px; }
+    margin-bottom: 32px; }
+  .subscribe-panel h4 {
+    font-size: 24px;
+    margin-bottom: 0; }
+  .subscribe-panel p {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto; }
+  .subscribe-panel .feature-icon {
+    font-size: 36px;
+    margin-top: 32px;
+    margin-bottom: 0; }
   .subscribe-panel.-intro p {
     margin-bottom: 0; }
   .subscribe-panel.-intro i {
     font-size: 66px; }
+  .subscribe-panel.-upgrade .highlighted {
+    font-size: 46px;
+    color: #3faca7; }
+  .subscribe-panel.-upgrade .upgrade-reveal {
+    display: none; }
+    .subscribe-panel.-upgrade .upgrade-reveal .feature-icon {
+      color: #76a7b5;
+      font-size: 30px; }
+  .subscribe-panel.-contact {
+    text-align: left; }
+
+.subscribe-logos {
+  margin: 0; }
+  .subscribe-logos li {
+    display: inline-block;
+    width: 17%;
+    min-height: 100px;
+    margin: 1%;
+    border: 1px solid #e7e7e7; }

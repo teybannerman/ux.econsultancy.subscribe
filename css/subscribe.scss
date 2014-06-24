@@ -16,6 +16,7 @@ $text-dark:             #3c3c3c;
 $text-medium:           #585856;
 $text-smallbusiness:    #949b6f;
 $text-enterprise:       #3faca7;
+$text-reveal:           #76a7b5;
 $gutter:                36px;
 
 // @ EXTENDS
@@ -27,6 +28,11 @@ $gutter:                36px;
 
 %font--medium {
   font-family: 'bulomedium';
+  font-weight: normal;
+}
+
+%font--black {
+  font-family: 'buloblack';
   font-weight: normal;
 }
 
@@ -75,7 +81,11 @@ $gutter:                36px;
     .highlighted {
       color: $text-enterprise;
     }
-  }  
+  }
+
+  .btn--large {
+    font-size: 18px;
+  }
 }
 
 // @ PANELS: INDIVIDUAL
@@ -96,10 +106,33 @@ $gutter:                36px;
     margin-right: auto;
   }
 
+  h2 {
+    @extend %font--black;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
   h3 {
     @extend %font--medium;
     color: $text-medium;
-    margin-bottom: $gutter;
+    margin-bottom: 32px;
+  }
+
+  h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  p {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-icon {
+    font-size: 36px;
+    margin-top: 32px;
+    margin-bottom: 0;
   }
 
   // MODIFIERS
@@ -112,5 +145,37 @@ $gutter:                36px;
       font-size: 66px;
     }
   }
+
+  &.-upgrade {
+
+    .highlighted {
+      font-size: 46px;
+      color: $text-enterprise;
+    }
+
+    .upgrade-reveal {
+      display: none;
+
+      .feature-icon {
+        color: $text-reveal;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &.-contact {
+    text-align: left;
+  }
 }
 
+.subscribe-logos {
+  margin: 0;
+
+  li {
+    display: inline-block;
+    width: 17%;
+    min-height: 100px;
+    margin: 1%;
+    border: 1px solid $bg-medium;
+  }
+}
