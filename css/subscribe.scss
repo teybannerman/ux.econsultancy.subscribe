@@ -6,6 +6,13 @@
 // which sit outside of the regular UX repo.
 
 
+// @ IMPORT UX REPO VARIABLES AND INUIT MIXINS
+// --------------------------------------------------------------------------
+
+@import "../ux.econsultancy.com/css/setup";
+@import "../ux.econsultancy.com/bower_components/inuit.css/generic/mixins";
+
+
 // @ VARIABLES
 // --------------------------------------------------------------------------
 
@@ -19,6 +26,9 @@ $text-enterprise:       #3faca7;
 $text-reveal:           #76a7b5;
 $gutter:                36px;
 
+$z-index-subscribe:     120;
+
+
 // @ EXTENDS
 // --------------------------------------------------------------------------
 
@@ -26,8 +36,18 @@ $gutter:                36px;
   background: $bg-light;
 }
 
+%font--semibold {
+  font-family: 'adellesemibold';
+  font-weight: normal;
+}
+
 %font--medium {
   font-family: 'bulomedium';
+  font-weight: normal;
+}
+
+%font--bold {
+  font-family: 'bulobold';
   font-weight: normal;
 }
 
@@ -36,13 +56,114 @@ $gutter:                36px;
   font-weight: normal;
 }
 
-// @ NAVBAR
+
+// @ SUBSCRIBE NAVBAR
 // --------------------------------------------------------------------------
 
 .subscribe-navbar {
   position: fixed;
   max-width: 1280px;
   margin: 0 auto;
+  padding-right: 0;
+  line-height: 30px;
+  text-align: center;
+
+  .navbar-logo {
+    @include media-query(palm) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .navbar-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 48px;
+    background: $brand-color;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 10px;
+  }
+
+  .navbar-links {
+    margin: 0 auto; 
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 12px;
+      margin-top: 8px;
+    }
+
+    a {
+      color: $text-dark;
+      font-size: 14px;
+      padding: 10px 3px;
+    }
+
+    .special {
+
+      a {
+        border-bottom: 4px solid $brand-color;
+        color: $brand-color;
+      }
+    }
+
+    @include media-query(palm) {
+      background: #f7f6f3;
+      padding-bottom: 10px;
+      box-shadow: 0 0 3px #bbb;
+
+      li {
+        width: 49%;
+        text-align: left;
+        line-height: 12px;
+
+        &:first-child, &:first-child + li {
+          margin-top: 18px;
+        }
+
+        a {
+          padding: 0 3px;
+        }
+      }
+
+      .special a {
+        border-bottom: 0;
+      }
+    }
+
+    @include media-query(lap) {
+
+      li {
+        padding: 0 6px;
+      }
+    }
+  }
+
+  .navbar-cta {
+    width: 100%;
+    background: $bg-white;
+    margin-top: -3px;
+    padding: 16px 0;
+    border-bottom: 1px solid $bg-medium;
+
+    .cta-text {
+      @extend %font--bold;
+      font-size: 20px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    @include media-query(palm) {
+      display: none;
+    }
+  }
 
   &.headroom {
     transition: all 200ms ease-in-out;
@@ -53,7 +174,11 @@ $gutter:                36px;
   }
 
   &.headroom--top {
-    position: static;  
+    position: static;
+
+    .navbar-cta {
+      display: none;
+    }
   }
 
   &.headroom--pinned {
@@ -64,10 +189,16 @@ $gutter:                36px;
   &.headroom--unpinned {
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
+
+    @include media-query(palm) {
+      transform: translateY(-170px);
+      -webkit-transform: translateY(-170px);
+    }
   }
 }
 
-// @ PANELS: GENERAL
+
+// @ PANELS: BASE
 // --------------------------------------------------------------------------
 
 .subscribe-promo {
@@ -88,6 +219,7 @@ $gutter:                36px;
   }
 }
 
+
 // @ PANELS: INDIVIDUAL
 // --------------------------------------------------------------------------
 
@@ -104,23 +236,40 @@ $gutter:                36px;
     max-width: 840px;
     margin-left: auto;
     margin-right: auto;
+
+    @include media-query(palm) {
+      font-size: 28px;
+    }
   }
 
   h2 {
     @extend %font--black;
     font-size: 36px;
     line-height: 42px;
+
+    @include media-query(palm) {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 
   h3 {
     @extend %font--medium;
     color: $text-medium;
     margin-bottom: 32px;
+
+    @include media-query(palm) {
+      font-size: 20px;
+    }
   }
 
   h4 {
     font-size: 24px;
     margin-bottom: 0;
+
+    @include media-query(palm) {
+      font-size: 18px;
+    }
   }
 
   p {
@@ -138,11 +287,21 @@ $gutter:                36px;
   // MODIFIERS
 
   &.-intro {
+
     p {
       margin-bottom: 0;
     }
+
     i {
       font-size: 66px;
+
+      @include media-query(palm) {
+        font-size: 48px;
+      }
+    }
+
+    @include media-query(palm) {
+      margin-top: 120px;
     }
   }
 
@@ -168,6 +327,10 @@ $gutter:                36px;
   }
 }
 
+
+// @ COMPANY LOGOS
+// --------------------------------------------------------------------------
+
 .subscribe-logos {
   margin: 0;
 
@@ -177,5 +340,34 @@ $gutter:                36px;
     min-height: 100px;
     margin: 1%;
     border: 1px solid $bg-medium;
+    border-radius: 3px;
+
+    @include media-query(palm) {
+      width: 33%;
+      margin: 3%;
+    }
+  }
+}
+
+
+// @ CONTACT MEDIA OBJECTS
+// --------------------------------------------------------------------------
+
+.subscribe-contact {
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  i {
+    margin-right: 8px;
+  }
+
+  .phone {
+    @extend %font--semibold;
   }
 }
