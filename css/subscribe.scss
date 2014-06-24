@@ -328,6 +328,40 @@ $z-index-subscribe:     120;
 }
 
 
+// @ GOALS PANEL
+// --------------------------------------------------------------------------
+
+.subscribe-goals__text {
+  text-align: left;
+  padding: 100px 0;
+
+  p {
+    margin: 0;
+  }
+
+  @include media-query(lap) {
+    padding: 40px 0;
+  }
+
+  @include media-query(palm) {
+    padding: 30px 0;
+    text-align: center;
+  }
+}
+
+.subscribe-goals__image {
+  
+  img {
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  @include media-query(palm) {
+    padding: 0 30px;
+  }
+}
+
+
 // @ COMPANY LOGOS
 // --------------------------------------------------------------------------
 
