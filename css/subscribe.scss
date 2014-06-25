@@ -19,7 +19,9 @@
 $bg-white:              #fff;
 $bg-light:              #f4f5f0;
 $bg-medium:             #e7e7e7;
+$bg-dark:               #3c3c3c;
 $text-dark:             #3c3c3c;
+$text-light:            #999999;
 $text-medium:           #585856;
 $text-smallbusiness:    #949b6f;
 $text-enterprise:       #3faca7;
@@ -54,6 +56,23 @@ $z-index-subscribe:     120;
 %font--black {
   font-family: 'buloblack';
   font-weight: normal;
+}
+
+
+// @ FOR THE UX REPO
+// --------------------------------------------------------------------------
+
+img.circled {
+  border-radius: 50%;
+}
+
+.btn--secondary {
+  background: $brand-color;
+  border-color: darken($brand-color, 10%);
+
+  &:hover {
+    background: lighten($brand-color, 10%);
+  }
 }
 
 
@@ -101,15 +120,15 @@ $z-index-subscribe:     120;
     a {
       color: $text-dark;
       font-size: 14px;
-      padding: 10px 3px;
+      padding: 12px 3px;
     }
 
-    .special {
+    .active a {
+      border-bottom: 4px solid $brand-color;
+    }
 
-      a {
-        border-bottom: 4px solid $brand-color;
-        color: $brand-color;
-      }
+    .special a {
+      color: $brand-color;
     }
 
     @include media-query(palm) {
@@ -193,6 +212,43 @@ $z-index-subscribe:     120;
     @include media-query(palm) {
       transform: translateY(-170px);
       -webkit-transform: translateY(-170px);
+    }
+  }
+}
+
+
+// @ HEADER
+// --------------------------------------------------------------------------
+
+.subscribe-header {
+  padding: $gutter ($gutter*2) ($gutter*2);
+  background-image:url('../images/subscribe-header-bg.jpg');
+
+  h3 {
+    @extend %font--medium;
+    color: $bg-white;
+    line-height: 32px;
+  }
+
+  p {
+    margin-top: $gutter / 2;
+  }
+
+  @include media-query(palm) {
+    padding: ($gutter/4) ($gutter/2);
+    margin-top: 120px;
+
+    .page-header-with-bg__body {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 }
@@ -325,6 +381,22 @@ $z-index-subscribe:     120;
   &.-contact {
     text-align: left;
   }
+
+  &.-features {
+    text-align: left;
+  }
+
+  &.-achieve {
+
+    .grid {
+      margin-bottom: $gutter;
+    }
+
+    @include media-query(lap-and-up) {
+      padding-left: $gutter * 3;
+      padding-right: $gutter * 3;
+    }
+  }
 }
 
 
@@ -404,4 +476,16 @@ $z-index-subscribe:     120;
   .phone {
     @extend %font--semibold;
   }
+}
+
+
+// @ FOOTER
+// --------------------------------------------------------------------------
+
+.subscribe-footer {
+  @extend %font--medium;
+  background: $bg-light;
+  border-top: 5px solid $bg-medium;
+  padding: $gutter * 1.5;
+  font-size: 12px;
 }

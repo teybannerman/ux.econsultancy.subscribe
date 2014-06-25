@@ -119,7 +119,7 @@
   font-family: 'adellesemibold';
   font-weight: normal; }
 
-.subscribe-panel h3 {
+.subscribe-header h3, .subscribe-panel h3, .subscribe-footer {
   font-family: 'bulomedium';
   font-weight: normal; }
 
@@ -130,6 +130,15 @@
 .subscribe-panel h2 {
   font-family: 'buloblack';
   font-weight: normal; }
+
+img.circled {
+  border-radius: 50%; }
+
+.btn--secondary {
+  background: #ed0015;
+  border-color: #ba0010; }
+  .btn--secondary:hover {
+    background: #ff2135; }
 
 .subscribe-navbar {
   position: fixed;
@@ -163,9 +172,10 @@
     .subscribe-navbar .navbar-links a {
       color: #3c3c3c;
       font-size: 14px;
-      padding: 10px 3px; }
+      padding: 12px 3px; }
+    .subscribe-navbar .navbar-links .active a {
+      border-bottom: 4px solid #ed0015; }
     .subscribe-navbar .navbar-links .special a {
-      border-bottom: 4px solid #ed0015;
       color: #ed0015; }
     @media only screen and (max-width: 599px) {
       .subscribe-navbar .navbar-links {
@@ -218,6 +228,26 @@
       .subscribe-navbar.headroom--unpinned {
         transform: translateY(-170px);
         -webkit-transform: translateY(-170px); } }
+
+.subscribe-header {
+  padding: 36px 72px 72px;
+  background-image: url("../images/subscribe-header-bg.jpg"); }
+  .subscribe-header h3 {
+    color: white;
+    line-height: 32px; }
+  .subscribe-header p {
+    margin-top: 18px; }
+  @media only screen and (max-width: 599px) {
+    .subscribe-header {
+      padding: 9px 18px;
+      margin-top: 120px; }
+      .subscribe-header .page-header-with-bg__body {
+        margin: 0; }
+      .subscribe-header h1 {
+        font-size: 28px; }
+      .subscribe-header h3 {
+        font-size: 16px;
+        line-height: 24px; } }
 
 .subscribe-promo.-small-business .highlighted {
   color: #949b6f; }
@@ -284,6 +314,14 @@
       font-size: 30px; }
   .subscribe-panel.-contact {
     text-align: left; }
+  .subscribe-panel.-features {
+    text-align: left; }
+  .subscribe-panel.-achieve .grid {
+    margin-bottom: 36px; }
+  @media only screen and (min-width: 600px) {
+    .subscribe-panel.-achieve {
+      padding-left: 108px;
+      padding-right: 108px; } }
 
 .subscribe-goals__text {
   text-align: left;
@@ -325,3 +363,9 @@
   margin-bottom: 0; }
 .subscribe-contact i {
   margin-right: 8px; }
+
+.subscribe-footer {
+  background: #f4f5f0;
+  border-top: 5px solid #e7e7e7;
+  padding: 54px;
+  font-size: 12px; }
