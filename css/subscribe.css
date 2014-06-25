@@ -140,6 +140,18 @@ img.circled {
   .btn--secondary:hover {
     background: #ff2135; }
 
+.action-card.-alt {
+  background: #f7f6f2;
+  margin-bottom: 10px;
+  min-height: 113px; }
+  .action-card.-alt a {
+    padding: 20px; }
+  .action-card.-alt h4 {
+    font-size: 18px;
+    color: #2f76ac; }
+  .action-card.-alt:hover .media-flex__img {
+    color: #2f76ac; }
+
 .subscribe-navbar {
   position: fixed;
   max-width: 1280px;
@@ -230,6 +242,7 @@ img.circled {
         -webkit-transform: translateY(-170px); } }
 
 .subscribe-header {
+  margin: 0;
   padding: 36px 72px 72px;
   background-image: url("../images/subscribe-header-bg.jpg"); }
   .subscribe-header h3 {
@@ -304,6 +317,8 @@ img.circled {
   @media only screen and (max-width: 599px) {
     .subscribe-panel.-intro {
       margin-top: 120px; } }
+  .subscribe-panel.-buffer {
+    display: none; }
   .subscribe-panel.-upgrade .highlighted {
     font-size: 46px;
     color: #3faca7; }
@@ -316,6 +331,10 @@ img.circled {
     text-align: left; }
   .subscribe-panel.-features {
     text-align: left; }
+    .subscribe-panel.-features h3 {
+      line-height: 32px; }
+    .subscribe-panel.-features .subheading {
+      margin-bottom: 20px; }
   .subscribe-panel.-achieve .grid {
     margin-bottom: 36px; }
   @media only screen and (min-width: 600px) {

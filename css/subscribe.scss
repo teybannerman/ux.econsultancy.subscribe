@@ -75,6 +75,31 @@ img.circled {
   }
 }
 
+.action-card {
+
+  &.-alt {
+    background: #f7f6f2;
+    margin-bottom: 10px;
+    min-height: 113px;
+
+    a {
+      padding: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: #2f76ac;
+    }
+
+    &:hover {
+
+      .media-flex__img {
+        color: #2f76ac;
+      }
+    } 
+  }
+}
+
 
 // @ SUBSCRIBE NAVBAR
 // --------------------------------------------------------------------------
@@ -221,6 +246,7 @@ img.circled {
 // --------------------------------------------------------------------------
 
 .subscribe-header {
+  margin: 0;
   padding: $gutter ($gutter*2) ($gutter*2);
   background-image:url('../images/subscribe-header-bg.jpg');
 
@@ -361,6 +387,10 @@ img.circled {
     }
   }
 
+  &.-buffer {
+    display: none;
+  }
+
   &.-upgrade {
 
     .highlighted {
@@ -384,6 +414,14 @@ img.circled {
 
   &.-features {
     text-align: left;
+
+    h3 {
+      line-height: 32px;
+    }
+
+    .subheading {
+      margin-bottom: 20px;
+    }
   }
 
   &.-achieve {
