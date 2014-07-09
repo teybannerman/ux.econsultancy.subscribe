@@ -410,6 +410,16 @@ img.circled {
 
   &.-contact {
     text-align: left;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    h5 {
+      @extend %font--medium;
+      color: $text-medium;
+      font-size: 18px;
+    }
   }
 
   &.-features {

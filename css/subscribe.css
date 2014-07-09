@@ -119,7 +119,7 @@
   font-family: 'adellesemibold';
   font-weight: normal; }
 
-.subscribe-header h3, .subscribe-panel h3, .subscribe-footer {
+.subscribe-header h3, .subscribe-panel h3, .subscribe-panel.-contact h5, .subscribe-footer {
   font-family: 'bulomedium';
   font-weight: normal; }
 
@@ -329,6 +329,11 @@ img.circled {
       font-size: 30px; }
   .subscribe-panel.-contact {
     text-align: left; }
+    .subscribe-panel.-contact h2 {
+      margin-bottom: 24px; }
+    .subscribe-panel.-contact h5 {
+      color: #585856;
+      font-size: 18px; }
   .subscribe-panel.-features {
     text-align: left; }
     .subscribe-panel.-features h3 {
