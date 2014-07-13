@@ -100,6 +100,22 @@ img.circled {
   }
 }
 
+.contact-panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-panel__header {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.contact-panel__body {
+  padding: 20px;
+}
+
 
 // @ SUBSCRIBE NAVBAR
 // --------------------------------------------------------------------------
@@ -464,6 +480,52 @@ img.circled {
     @include media-query(lap-and-up) {
       padding-left: $gutter * 3;
       padding-right: $gutter * 3;
+    }
+  }
+
+  &.-research {
+
+    .grid__item {
+      text-align: left;
+    }
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    ul { 
+      margin-left: 0;
+      padding-left: 20px;
+      font-size: 13px;
+    }
+
+    .research-featured {
+
+      @include media-query(lap-and-up) {
+        float: right;
+        text-align: left;
+      }
+    }
+  }
+
+  &.-standapart {
+    background: $bg-dark;
+
+    h1, h2, h4, p {
+      color: $bg-white;
+    }
+
+    h3, p {
+      color: $text-light;
+    }
+
+    .feature-icon {
+      font-size: 48px;
+      margin-top: 10px;
+    }
+
+    .grid {
+      margin-bottom: 16px;
     }
   }
 }

@@ -152,6 +152,19 @@ img.circled {
   .action-card.-alt:hover .media-flex__img {
     color: #2f76ac; }
 
+.contact-panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 0;
+  padding: 0; }
+
+.contact-panel__header {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0; }
+
+.contact-panel__body {
+  padding: 20px; }
+
 .subscribe-navbar {
   position: fixed;
   width: 100%;
@@ -357,6 +370,29 @@ img.circled {
     .subscribe-panel.-achieve {
       padding-left: 108px;
       padding-right: 108px; } }
+  .subscribe-panel.-research .grid__item {
+    text-align: left; }
+  .subscribe-panel.-research h4 {
+    margin-bottom: 20px; }
+  .subscribe-panel.-research ul {
+    margin-left: 0;
+    padding-left: 20px;
+    font-size: 13px; }
+  @media only screen and (min-width: 600px) {
+    .subscribe-panel.-research .research-featured {
+      float: right;
+      text-align: left; } }
+  .subscribe-panel.-standapart {
+    background: #3c3c3c; }
+    .subscribe-panel.-standapart h1, .subscribe-panel.-standapart h2, .subscribe-panel.-standapart h4, .subscribe-panel.-standapart p {
+      color: white; }
+    .subscribe-panel.-standapart h3, .subscribe-panel.-standapart p {
+      color: #999999; }
+    .subscribe-panel.-standapart .feature-icon {
+      font-size: 48px;
+      margin-top: 10px; }
+    .subscribe-panel.-standapart .grid {
+      margin-bottom: 16px; }
 
 .subscribe-goals__text {
   text-align: left;
