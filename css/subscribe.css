@@ -156,7 +156,17 @@ img.circled {
   background: #fff;
   border: 1px solid #ddd;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border-radius: 3px; }
+  .contact-panel h7 {
+    font-size: 24px;
+    line-height: 42px;
+    color: #585856; }
+  .contact-panel p {
+    margin-bottom: 4px;
+    color: #585856; }
+  .contact-panel .contact-line i {
+    color: #585856; }
 
 .contact-panel__header {
   border-bottom: 1px solid #ddd;
@@ -295,7 +305,7 @@ img.circled {
   border-bottom: 1px solid #e7e7e7;
   text-align: center; }
   .subscribe-panel h1 {
-    max-width: 840px;
+    max-width: 920px;
     margin-left: auto;
     margin-right: auto; }
     @media only screen and (max-width: 599px) {
@@ -310,7 +320,8 @@ img.circled {
         line-height: 28px; } }
   .subscribe-panel h3 {
     color: #585856;
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    line-height: 32px; }
     @media only screen and (max-width: 599px) {
       .subscribe-panel h3 {
         font-size: 20px; } }
@@ -413,6 +424,24 @@ img.circled {
 @media only screen and (max-width: 599px) {
   .subscribe-goals__image {
     padding: 0 30px; } }
+
+.choice-box {
+  background: #f4f5f0;
+  border: 1px solid #e7e7e7;
+  padding: 32px 40px 20px; }
+  .choice-box h1 {
+    margin-bottom: 0; }
+  .choice-box h4 {
+    color: #585856;
+    margin-bottom: 16px; }
+  .choice-box.-smallbus .choice-icon {
+    color: #949b6f; }
+  .choice-box.-enterprise .choice-icon {
+    color: #3faca7; }
+
+.choice-icon {
+  font-size: 48px;
+  margin-bottom: 0; }
 
 .subscribe-logos {
   margin: 0; }

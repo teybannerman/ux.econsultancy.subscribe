@@ -105,6 +105,22 @@ img.circled {
   border: 1px solid #ddd;
   margin: 0;
   padding: 0;
+  border-radius: 3px;
+
+  h7 {
+    font-size: 24px;
+    line-height: 42px;
+    color: $text-medium;
+  }
+
+  p {
+    margin-bottom: 4px;
+    color: $text-medium;
+  }
+
+  .contact-line i {
+    color: $text-medium;
+  }
 }
 
 .contact-panel__header {
@@ -349,7 +365,7 @@ img.circled {
   }
 
   h1 {
-    max-width: 840px;
+    max-width: 920px;
     margin-left: auto;
     margin-right: auto;
 
@@ -373,6 +389,7 @@ img.circled {
     @extend %font--medium;
     color: $text-medium;
     margin-bottom: 32px;
+    line-height: 32px;
 
     @include media-query(palm) {
       font-size: 20px;
@@ -562,6 +579,40 @@ img.circled {
   @include media-query(palm) {
     padding: 0 30px;
   }
+}
+
+.choice-box {
+  background: $bg-light;
+  border: 1px solid $bg-medium;
+  padding: 32px 40px 20px;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h4 {
+    color: $text-medium;
+    margin-bottom: 16px;
+  }
+
+  &.-smallbus {
+
+    .choice-icon {
+      color: $text-smallbusiness;
+    }
+  }
+
+  &.-enterprise {
+
+    .choice-icon {
+      color: $text-enterprise;
+    }
+  }
+}
+
+.choice-icon {
+  font-size: 48px;
+  margin-bottom: 0;
 }
 
 
