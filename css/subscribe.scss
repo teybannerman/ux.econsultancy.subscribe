@@ -107,6 +107,12 @@ img.circled {
   padding: 0;
   border-radius: 3px;
 
+  h5 {
+    @extend %font--medium;
+    color: $text-light;
+    font-size: 14px;
+  }
+
   h7 {
     font-size: 24px;
     line-height: 42px;
@@ -130,6 +136,29 @@ img.circled {
 
 .contact-panel__body {
   padding: 20px;
+}
+
+.contact-panel__video {
+  position: relative;
+
+  .video-state-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 0 7px 12px;
+      border-color: transparent transparent transparent #ffffff;
+    }
+  }
 }
 
 
