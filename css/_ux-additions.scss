@@ -27,6 +27,7 @@ img.circled {
 
 .page-header-with-bg.-home {
   background-image: url('../images/home-header-bg.jpg');
+  margin-bottom: 0;
 
   .page-header-with-bg__body {
     margin: 120px 130px 0;
@@ -41,6 +42,10 @@ img.circled {
   .intro {
     color: #fff;
   }
+
+  .scroll-helper i {
+    color: #fff;
+  }
 }
 
 
@@ -53,6 +58,29 @@ img.circled {
 
   &:hover {
     background: lighten($brand-color, 10%);
+  }
+}
+
+
+// ui/_checked-list.scss
+// --------------------------------------------------------------------------
+
+.checked-list.-greenery {
+
+  .checked-list__checkmark {
+    color: $text-aqua;
+  }
+  
+  .checked-list__item {
+    width: auto;
+  }
+}
+
+.unindented-list.-centered {
+  
+  li {
+    width: auto;
+    text-align: center;
   }
 }
 
@@ -146,6 +174,9 @@ img.circled {
       border-style: solid;
       border-width: 7px 0 7px 12px;
       border-color: transparent transparent transparent #ffffff;
+      position: absolute;
+      top: 18px;
+      left: 21px;
     }
   }
 }

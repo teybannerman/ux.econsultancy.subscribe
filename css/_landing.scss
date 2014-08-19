@@ -77,6 +77,47 @@
   }
 }
 
+.landing-panel.-darkened {
+  background: $bg-dark;
+
+  h1, h2, h4, p {
+    color: $bg-white;
+  }
+
+  h3, p {
+    color: $text-light;
+  }
+}
+
+
+// @ ICONOGRAPHY
+// --------------------------------------------------------------------------
+
+.huge-icon {
+  font-size: 4em;
+  margin: 0;
+  color: $text-red;
+}
+
+
+// @ SCROLL HELPERS
+// --------------------------------------------------------------------------
+
+.scroll-helper {
+  @extend %font--medium;
+  margin-top: 100px;
+  font-size: 1.1em;
+  opacity: 0.7;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  i {
+    font-size: 1.5em;
+  }
+}
+
 
 // @ CLIENT LOGOS
 // --------------------------------------------------------------------------
