@@ -4,162 +4,13 @@
 //
 // This stylesheet is used for 'Subscribe' promo overlays
 // which sit outside of the regular UX repo.
+//
+// Dependencies:
+// - Econsultancy UX repo
+// - landing-pages.scss
+//
+// ----------------------------------------------------------------------------
 
-
-// @ IMPORT UX REPO VARIABLES AND INUIT MIXINS
-// --------------------------------------------------------------------------
-
-@import "../ux.econsultancy.com/css/setup";
-@import "../ux.econsultancy.com/bower_components/inuit.css/generic/mixins";
-
-
-// @ VARIABLES
-// --------------------------------------------------------------------------
-
-$bg-white:              #fff;
-$bg-light:              #f4f5f0;
-$bg-medium:             #e7e7e7;
-$bg-dark:               #3c3c3c;
-$text-dark:             #3c3c3c;
-$text-light:            #999999;
-$text-medium:           #585856;
-$text-smallbusiness:    #949b6f;
-$text-enterprise:       #3faca7;
-$text-reveal:           #76a7b5;
-$gutter:                36px;
-
-$z-index-subscribe:     120;
-
-
-// @ EXTENDS
-// --------------------------------------------------------------------------
-
-%bg-light {
-  background: $bg-light;
-}
-
-%font--semibold {
-  font-family: 'adellesemibold';
-  font-weight: normal;
-}
-
-%font--medium {
-  font-family: 'bulomedium';
-  font-weight: normal;
-}
-
-%font--bold {
-  font-family: 'bulobold';
-  font-weight: normal;
-}
-
-%font--black {
-  font-family: 'buloblack';
-  font-weight: normal;
-}
-
-
-// @ FOR THE UX REPO
-// --------------------------------------------------------------------------
-
-img.circled {
-  border-radius: 50%;
-}
-
-.btn--secondary {
-  background: $brand-color;
-  border-color: darken($brand-color, 10%);
-
-  &:hover {
-    background: lighten($brand-color, 10%);
-  }
-}
-
-.action-card {
-
-  &.-alt {
-    background: #f7f6f2;
-    margin-bottom: 10px;
-    min-height: 113px;
-
-    a {
-      padding: 20px;
-    }
-
-    h4 {
-      font-size: 18px;
-      color: #2f76ac;
-    }
-
-    &:hover {
-
-      .media-flex__img {
-        color: #2f76ac;
-      }
-    } 
-  }
-}
-
-.contact-panel {
-  background: #fff;
-  border: 1px solid #ddd;
-  margin: 0;
-  padding: 0;
-  border-radius: 3px;
-
-  h5 {
-    @extend %font--medium;
-    color: $text-light;
-    font-size: 14px;
-  }
-
-  h7 {
-    font-size: 24px;
-    line-height: 42px;
-    color: $text-medium;
-  }
-
-  p {
-    margin-bottom: 4px;
-    color: $text-medium;
-  }
-
-  .contact-line i {
-    color: $text-medium;
-  }
-}
-
-.contact-panel__header {
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-}
-
-.contact-panel__body {
-  padding: 20px;
-}
-
-.contact-panel__video {
-  position: relative;
-
-  .video-state-icon {
-    position: absolute;
-    right: 10px;
-    bottom: 16px;
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
-
-    &:before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 7px 0 7px 12px;
-      border-color: transparent transparent transparent #ffffff;
-    }
-  }
-}
 
 
 // @ SUBSCRIBE NAVBAR
@@ -384,72 +235,12 @@ img.circled {
 // @ PANELS: INDIVIDUAL
 // --------------------------------------------------------------------------
 
-.subscribe-panel {
-  padding: $gutter;
-  border-bottom: 1px solid $bg-medium;
-  text-align: center;
-
-  &:nth-child(even) {
-    @extend %bg-light;
-  }
-
-  h1 {
-    max-width: 920px;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include media-query(palm) {
-      font-size: 28px;
-    }
-  }
-
-  h2 {
-    @extend %font--black;
-    font-size: 36px;
-    line-height: 42px;
-
-    @include media-query(palm) {
-      font-size: 24px;
-      line-height: 28px;
-    }
-  }
-
-  h3 {
-    @extend %font--medium;
-    color: $text-medium;
-    margin-bottom: 32px;
-    line-height: 32px;
-
-    @include media-query(palm) {
-      font-size: 20px;
-    }
-  }
-
-  h4 {
-    font-size: 24px;
-    margin-bottom: 0;
-
-    @include media-query(palm) {
-      font-size: 18px;
-    }
-  }
-
-  p {
-    max-width: 840px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .feature-icon {
-    font-size: 36px;
-    margin-top: 32px;
-    margin-bottom: 0;
-  }
+.landing-panel {
+  
 
   // MODIFIERS
 
-  &.-intro {
-
+  &.-sub-intro {
     padding-top: 100px;
 
     p {
@@ -470,11 +261,7 @@ img.circled {
     }
   }
 
-  &.-buffer {
-    display: none;
-  }
-
-  &.-upgrade {
+  &.-sub-upgrade {
 
     .highlighted {
       font-size: 46px;
@@ -491,7 +278,7 @@ img.circled {
     }
   }
 
-  &.-contact {
+  &.-sub-contact {
     text-align: left;
 
     h2 {
@@ -505,7 +292,7 @@ img.circled {
     }
   }
 
-  &.-features {
+  &.-sub-features {
     text-align: left;
 
     h3 {
@@ -517,7 +304,7 @@ img.circled {
     }
   }
 
-  &.-achieve {
+  &.-sub-achieve {
 
     .grid {
       margin-bottom: $gutter;
@@ -529,7 +316,7 @@ img.circled {
     }
   }
 
-  &.-research {
+  &.-sub-research {
 
     .grid__item {
       text-align: left;
@@ -554,7 +341,7 @@ img.circled {
     }
   }
 
-  &.-standapart {
+  &.-sub-standapart {
     background: $bg-dark;
 
     h1, h2, h4, p {
@@ -642,28 +429,6 @@ img.circled {
 .choice-icon {
   font-size: 48px;
   margin-bottom: 0;
-}
-
-
-// @ COMPANY LOGOS
-// --------------------------------------------------------------------------
-
-.subscribe-logos {
-  margin: 0;
-
-  li {
-    display: inline-block;
-    width: 17%;
-    min-height: 100px;
-    margin: 1%;
-    border: 1px solid $bg-medium;
-    border-radius: 3px;
-
-    @include media-query(palm) {
-      width: 33%;
-      margin: 3%;
-    }
-  }
 }
 
 

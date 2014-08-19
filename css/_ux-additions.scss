@@ -1,0 +1,151 @@
+// These styles should be merged into the Econsultancy UX Repo
+
+// @ FOR THE UX REPO
+// --------------------------------------------------------------------------
+
+
+// _theme.scss
+// --------------------------------------------------------------------------
+
+img.circled {
+  border-radius: 50%;
+}
+
+
+// ui/_intro.scss
+// --------------------------------------------------------------------------
+
+.intro.-mega {
+  @extend %font--medium;
+  font-size: 1.5em;
+  color: $text-medium;
+}
+
+
+// ui/_page-header-with-bg.scss
+// --------------------------------------------------------------------------
+
+.page-header-with-bg.-home {
+  background-image: url('../images/home-header-bg.jpg');
+
+  .page-header-with-bg__body {
+    margin: 120px 130px 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4.2em;
+  }
+
+  .intro {
+    color: #fff;
+  }
+}
+
+
+// ui/_buttons.scss
+// --------------------------------------------------------------------------
+
+.btn--secondary {
+  background: $brand-color;
+  border-color: darken($brand-color, 10%);
+
+  &:hover {
+    background: lighten($brand-color, 10%);
+  }
+}
+
+
+// ui/_action-card.scss
+// --------------------------------------------------------------------------
+
+.action-card {
+
+  &.-alt {
+    background: #f7f6f2;
+    margin-bottom: 10px;
+    min-height: 113px;
+
+    a {
+      padding: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: #2f76ac;
+    }
+
+    &:hover {
+
+      .media-flex__img {
+        color: #2f76ac;
+      }
+    } 
+  }
+}
+
+
+// ui/_contact-panel.scss [NEW]
+// --------------------------------------------------------------------------
+
+.contact-panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px;
+
+  h5 {
+    @extend %font--medium;
+    color: $text-light;
+    font-size: 14px;
+  }
+
+  h7 {
+    font-size: 24px;
+    line-height: 42px;
+    color: $text-medium;
+  }
+
+  p {
+    margin-bottom: 4px;
+    color: $text-medium;
+  }
+
+  .contact-line i {
+    color: $text-medium;
+  }
+}
+
+.contact-panel__header {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.contact-panel__body {
+  padding: 20px;
+}
+
+.contact-panel__video {
+  position: relative;
+
+  .video-state-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 0 7px 12px;
+      border-color: transparent transparent transparent #ffffff;
+    }
+  }
+}

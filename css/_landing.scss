@@ -1,0 +1,113 @@
+// ----------------------------------------------------------------------------
+// LANDING
+// ----------------------------------------------------------------------------
+//
+// Supplementary styles for Econsultancy landing pages 
+//
+// Dependencies:
+// - Econsultancy UX repo
+//
+// ----------------------------------------------------------------------------
+
+.landing-panel {
+
+  padding: $gutter;
+  border-bottom: 1px solid $bg-medium;
+  text-align: center;
+
+  &.-buffer {
+    display: none;
+  }
+
+  &:nth-child(even) {
+    @extend %bg-light;
+  }
+
+  h1 {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-query(palm) {
+      font-size: 28px;
+    }
+  }
+
+  h2 {
+    @extend %font--black;
+    font-size: 36px;
+    line-height: 42px;
+
+    @include media-query(palm) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  h3 {
+    @extend %font--medium;
+    color: $text-medium;
+    margin-bottom: 32px;
+    line-height: 32px;
+
+    @include media-query(palm) {
+      font-size: 20px;
+    }
+  }
+
+  h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+
+    @include media-query(palm) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-icon {
+    font-size: 36px;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+}
+
+
+// @ CLIENT LOGOS
+// --------------------------------------------------------------------------
+
+.client-logos {
+  margin: 0;
+
+  li {
+    display: inline-block;
+    min-height: 100px;
+    margin: 1%;
+    border: 1px solid $bg-medium;
+    border-radius: 3px;
+
+    @include media-query(palm) {
+      width: 33%;
+      margin: 3%;
+    }
+  }
+
+  &.-five-row {
+  
+    li {
+      width: 17%;
+    }
+  }
+
+  &.-eight-row {
+
+    li {
+      width: 9.5%;
+    }
+  }
+}
