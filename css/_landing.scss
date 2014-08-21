@@ -57,7 +57,7 @@
 
   h4 {
     font-size: 24px;
-    margin-bottom: 0;
+    margin-bottom: 16px;
 
     @include media-query(palm) {
       font-size: 18px;
@@ -84,9 +84,17 @@
     color: $bg-white;
   }
 
-  h3, p {
+  h3 {
+    color: $bg-white;
+  }
+
+  p {
     color: $text-light;
   }
+}
+
+.landing-panel.-home-subscribe {
+  padding-top: 0;
 }
 
 
@@ -127,10 +135,11 @@
 
   li {
     display: inline-block;
-    min-height: 100px;
+    /*min-height: 100px;*/
     margin: 1%;
     border: 1px solid $bg-medium;
     border-radius: 3px;
+    background: #fff;
 
     @include media-query(palm) {
       width: 33%;
@@ -148,7 +157,32 @@
   &.-eight-row {
 
     li {
-      width: 9.5%;
+      width: 10.4%;
+      margin: 0.9%;
+    }
+
+    li:nth-child(8n+1) {
+      margin-left: 0;
+    }
+
+    li:nth-child(8n+8) {
+      margin-right: 0;
+    }
+
+    @include media-query(palm) {
+
+      li {
+        width: 20.8%;
+        margin: 1.8%;
+      }
+
+      li:nth-child(4n+1) {
+        margin-left: 0;
+      }
+
+      li:nth-child(4n+4) {
+        margin-right: 0;
+      }
     }
   }
 }

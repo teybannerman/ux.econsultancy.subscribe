@@ -134,6 +134,9 @@
 img.circled {
   border-radius: 50%; }
 
+.-text-left {
+  text-align: left; }
+
 .intro.-mega {
   font-size: 1.5em;
   color: #585856; }
@@ -145,6 +148,12 @@ img.circled {
     margin: 120px 130px 0;
     padding-right: 0;
     text-align: center; }
+    @media only screen and (max-width: 989px) {
+      .page-header-with-bg.-home .page-header-with-bg__body {
+        margin: 32px 32px 0; } }
+    @media only screen and (max-width: 599px) {
+      .page-header-with-bg.-home .page-header-with-bg__body {
+        margin: 20px 20px 0; } }
   .page-header-with-bg.-home h1 {
     font-size: 4.2em; }
   .page-header-with-bg.-home .intro {
@@ -158,6 +167,9 @@ img.circled {
   .btn--secondary:hover {
     background: #ff2135; }
 
+.btn--large {
+  font-size: 18px; }
+
 .checked-list.-greenery .checked-list__checkmark {
   color: #3dacaa; }
 .checked-list.-greenery .checked-list__item {
@@ -165,7 +177,14 @@ img.circled {
 
 .unindented-list.-centered li {
   width: auto;
-  text-align: center; }
+  text-align: center;
+  list-style: none; }
+.unindented-list.-centered li:before {
+  content: '\2022';
+  margin-right: 8px; }
+
+.unindented-list.-realigned li {
+  text-align: left; }
 
 .action-card.-alt {
   background: #f7f6f2;
@@ -197,6 +216,12 @@ img.circled {
     color: #585856; }
   .contact-panel .contact-line i {
     color: #585856; }
+  @media only screen and (max-width: 989px) {
+    .contact-panel {
+      margin-bottom: 20px; } }
+  @media only screen and (max-width: 599px) {
+    .contact-panel {
+      margin-bottom: 16px; } }
 
 .contact-panel__header {
   border-bottom: 1px solid #ddd;
@@ -207,6 +232,8 @@ img.circled {
 
 .contact-panel__video {
   position: relative; }
+  .contact-panel__video img {
+    width: 100%; }
   .contact-panel__video .video-state-icon {
     position: absolute;
     right: 10px;
@@ -255,7 +282,7 @@ img.circled {
         font-size: 20px; } }
   .landing-panel h4 {
     font-size: 24px;
-    margin-bottom: 0; }
+    margin-bottom: 16px; }
     @media only screen and (max-width: 599px) {
       .landing-panel h4 {
         font-size: 18px; } }
@@ -272,8 +299,13 @@ img.circled {
   background: #3c3c3c; }
   .landing-panel.-darkened h1, .landing-panel.-darkened h2, .landing-panel.-darkened h4, .landing-panel.-darkened p {
     color: white; }
-  .landing-panel.-darkened h3, .landing-panel.-darkened p {
+  .landing-panel.-darkened h3 {
+    color: white; }
+  .landing-panel.-darkened p {
     color: #999999; }
+
+.landing-panel.-home-subscribe {
+  padding-top: 0; }
 
 .huge-icon {
   font-size: 4em;
@@ -293,10 +325,11 @@ img.circled {
   margin: 0; }
   .client-logos li {
     display: inline-block;
-    min-height: 100px;
+    /*min-height: 100px;*/
     margin: 1%;
     border: 1px solid #e7e7e7;
-    border-radius: 3px; }
+    border-radius: 3px;
+    background: #fff; }
     @media only screen and (max-width: 599px) {
       .client-logos li {
         width: 33%;
@@ -304,7 +337,20 @@ img.circled {
   .client-logos.-five-row li {
     width: 17%; }
   .client-logos.-eight-row li {
-    width: 9.5%; }
+    width: 10.4%;
+    margin: 0.9%; }
+  .client-logos.-eight-row li:nth-child(8n+1) {
+    margin-left: 0; }
+  .client-logos.-eight-row li:nth-child(8n+8) {
+    margin-right: 0; }
+  @media only screen and (max-width: 599px) {
+    .client-logos.-eight-row li {
+      width: 20.8%;
+      margin: 1.8%; }
+    .client-logos.-eight-row li:nth-child(4n+1) {
+      margin-left: 0; }
+    .client-logos.-eight-row li:nth-child(4n+4) {
+      margin-right: 0; } }
 
 .subscribe-navbar {
   position: fixed;
@@ -428,8 +474,6 @@ img.circled {
   color: #949b6f; }
 .subscribe-promo.-enterprise .highlighted {
   color: #3faca7; }
-.subscribe-promo .btn--large {
-  font-size: 18px; }
 
 .landing-panel.-sub-intro {
   padding-top: 100px; }

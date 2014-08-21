@@ -11,6 +11,10 @@ img.circled {
   border-radius: 50%;
 }
 
+.-text-left {
+  text-align: left;
+}
+
 
 // ui/_intro.scss
 // --------------------------------------------------------------------------
@@ -33,6 +37,14 @@ img.circled {
     margin: 120px 130px 0;
     padding-right: 0;
     text-align: center;
+
+    @include media-query(portable) {
+      margin: 32px 32px 0;
+    }
+
+    @include media-query(palm) {
+      margin: 20px 20px 0;
+    }
   }
 
   h1 {
@@ -61,6 +73,10 @@ img.circled {
   }
 }
 
+.btn--large {
+  font-size: 18px;
+}
+
 
 // ui/_checked-list.scss
 // --------------------------------------------------------------------------
@@ -81,6 +97,19 @@ img.circled {
   li {
     width: auto;
     text-align: center;
+    list-style: none;
+  }
+
+  li:before {
+    content: '\2022';
+    margin-right: 8px;
+  }
+}
+
+.unindented-list.-realigned {
+
+  li {
+    text-align: left;
   }
 }
 
@@ -144,6 +173,14 @@ img.circled {
   .contact-line i {
     color: $text-medium;
   }
+
+  @include media-query(portable) {
+    margin-bottom: 20px;
+  }
+
+  @include media-query(palm) {
+    margin-bottom: 16px;
+  }
 }
 
 .contact-panel__header {
@@ -157,6 +194,10 @@ img.circled {
 
 .contact-panel__video {
   position: relative;
+
+  img {
+    width: 100%;
+  }
 
   .video-state-icon {
     position: absolute;
