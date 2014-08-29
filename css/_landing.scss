@@ -114,6 +114,7 @@
 .scroll-helper {
   @extend %font--medium;
   margin-top: 100px;
+  margin-bottom: -30px;
   font-size: 1.1em;
   opacity: 0.7;
 
@@ -123,6 +124,15 @@
 
   i {
     font-size: 1.5em;
+  }
+}
+
+.landing-panel-footer {
+  margin: 0;
+
+  a {
+    color: #fff;
+    font-size: 14px;
   }
 }
 

@@ -15,6 +15,48 @@ img.circled {
   text-align: left;
 }
 
+.chevlink {
+
+  &:after {
+    @extend %icon;
+    content: "\e5ab";
+    color: #aaa;
+  }
+}
+
+
+// ui/layout/_content-homepage.scss
+// --------------------------------------------------------------------------
+
+.content-standard.-homepage {
+  padding-top: 40px;
+
+  .content-standard__main {
+
+    section {
+      margin-bottom: 40px;
+    }
+  }
+
+  .content-standard__sidebar {
+
+    .pod__header {
+
+      h2 {
+        text-transform: none;
+      }
+    }
+  }
+  
+  h1 {
+    @include font-size(35px, false);
+    margin-bottom: 26px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #ddd;
+  }
+
+}
+
 
 // ui/_intro.scss
 // --------------------------------------------------------------------------
@@ -23,6 +65,10 @@ img.circled {
   @extend %font--medium;
   font-size: 1.5em;
   color: $text-medium;
+}
+
+.intro.-light {
+  @extend %font--medium;
 }
 
 
@@ -47,6 +93,10 @@ img.circled {
     }
   }
 
+  .page-header-with-bg__footnote {
+    padding-top: 0;
+  }
+
   h1 {
     font-size: 4.2em;
   }
@@ -57,6 +107,18 @@ img.circled {
 
   .scroll-helper i {
     color: #fff;
+  }
+}
+
+.page-header-with-bg.-home-enterprise {
+  background-image: url('../images/home-header-bg2.jpg');
+
+  .page-header-with-bg__body {
+    margin-top: 70px;
+  }
+
+  h1 {
+    @include font-size(52px, false);
   }
 }
 
@@ -74,7 +136,7 @@ img.circled {
 }
 
 .btn--large {
-  font-size: 18px;
+  @include font-size(18px, false);
 }
 
 
@@ -114,6 +176,20 @@ img.circled {
 }
 
 
+// ui/_flyer.scss
+// --------------------------------------------------------------------------
+
+.flyer-body.-compact {
+  min-height: 95px;  
+  padding: 20px 20px 0;
+}
+
+.flyer-body__title.-small {
+  @extend %font--bold;
+  @include font-size(18px, false);
+}
+
+
 // ui/_action-card.scss
 // --------------------------------------------------------------------------
 
@@ -129,7 +205,7 @@ img.circled {
     }
 
     h4 {
-      font-size: 18px;
+      @include font-size(18px, false);
       color: #2f76ac;
     }
 
@@ -156,7 +232,7 @@ img.circled {
   h5 {
     @extend %font--medium;
     color: $text-light;
-    font-size: 14px;
+    @include font-size(14px, false);
   }
 
   h7 {
