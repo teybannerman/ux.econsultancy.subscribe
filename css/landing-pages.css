@@ -2612,7 +2612,7 @@
   font-family: 'adellesemibold';
   font-weight: normal; }
 
-.intro.-mega, .intro.-light, .contact-panel h5, .landing-panel h3, .scroll-helper, .subscribe-header h3, .landing-panel.-sub-contact h5, .subscribe-footer {
+.intro.-mega, .intro.-light, .block-link, .contact-panel h5, .landing-panel h3, .scroll-helper, .subscribe-header h3, .landing-panel.-sub-contact h5, .subscribe-footer {
   font-family: 'bulomedium';
   font-weight: normal; }
 
@@ -2630,9 +2630,16 @@ img.circled {
 .-text-left {
   text-align: left; }
 
+.chevlink:hover {
+  text-decoration: none; }
 .chevlink:after {
   content: "\e5ab";
+  position: relative;
+  top: 2px;
   color: #aaa; }
+
+.compact h5 {
+  margin-bottom: 0; }
 
 .content-standard.-homepage {
   padding-top: 40px; }
@@ -2691,6 +2698,29 @@ img.circled {
   font-size: 18px;
   font-size: 1.125rem; }
 
+.block-link {
+  display: block;
+  margin: 0 0 28px 0;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  text-transform: uppercase; }
+  .block-link:hover {
+    text-decoration: none; }
+  .block-link i {
+    margin-right: 8px; }
+
+.icon-list {
+  list-style: none; }
+  .icon-list a {
+    text-decoration: none; }
+  .icon-list i {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    margin-right: 8px;
+    color: #585856; }
+
 .checked-list.-greenery .checked-list__checkmark {
   color: #3dacaa; }
 .checked-list.-greenery .checked-list__item {
@@ -2714,6 +2744,9 @@ img.circled {
 .flyer-body__title.-small {
   font-size: 18px;
   font-size: 1.125rem; }
+
+.pod__body + .pod__body {
+  padding-top: 28px; }
 
 .action-card.-alt {
   background: #f7f6f2;

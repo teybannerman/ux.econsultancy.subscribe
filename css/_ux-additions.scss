@@ -17,10 +17,23 @@ img.circled {
 
 .chevlink {
 
+  &:hover {
+    text-decoration: none;
+  }
+
   &:after {
     @extend %icon;
     content: "\e5ab";
+    position: relative;
+    top: 2px;
     color: #aaa;
+  }
+}
+
+.compact {
+
+  h5 {
+    margin-bottom: 0;
   }
 }
 
@@ -140,6 +153,47 @@ img.circled {
 }
 
 
+// ui/_block-link.scss [NEW]
+// --------------------------------------------------------------------------
+
+.block-link {
+  @extend %font--medium;
+  display: block;
+  margin: 0 0 28px 0;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  i {
+    margin-right: 8px;
+  }
+}
+
+
+// ui/_icon-list.scss [NEW]
+// --------------------------------------------------------------------------
+
+.icon-list {
+  list-style: none;
+
+  a {
+    text-decoration: none;
+  }
+
+  i {
+    @include font-size(15px, false);
+    margin-right: 8px;
+    color: $text-medium;
+  }
+}
+
+
 // ui/_checked-list.scss
 // --------------------------------------------------------------------------
 
@@ -187,6 +241,14 @@ img.circled {
 .flyer-body__title.-small {
   @extend %font--bold;
   @include font-size(18px, false);
+}
+
+
+// ui/_pods.scss
+// --------------------------------------------------------------------------
+
+.pod__body + .pod__body {
+  padding-top: 28px;
 }
 
 
