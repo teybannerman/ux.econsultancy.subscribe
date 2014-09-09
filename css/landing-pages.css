@@ -2706,8 +2706,13 @@ img.circled {
   color: #fff;
   background: #000;
   text-transform: uppercase; }
+  .block-link.-primary {
+    background: #3dacaa; }
+  .block-link.-secondary {
+    background: #939b6e; }
   .block-link:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #fff; }
   .block-link i {
     margin-right: 8px; }
 

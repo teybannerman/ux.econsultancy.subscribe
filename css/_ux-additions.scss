@@ -166,8 +166,17 @@ img.circled {
   background: #000;
   text-transform: uppercase;
 
+  &.-primary {
+    background: $text-aqua;
+  }
+
+  &.-secondary {
+    background: $text-mustard;
+  }
+
   &:hover {
     text-decoration: none;
+    color: #fff;
   }
 
   i {
