@@ -194,6 +194,25 @@ img.circled {
 }
 
 
+// ui/_feature-block.scss
+// --------------------------------------------------------------------------
+
+.feature-block.-centered {
+
+  .feature-block__body {
+    float: none;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+.feature-block.-fom {
+  background: url('../images/festival-of-marketing-bg.png') center bottom no-repeat;
+}
+
+
 // ui/_checked-list.scss
 // --------------------------------------------------------------------------
 
@@ -249,6 +268,50 @@ img.circled {
 
 .pod__body + .pod__body {
   padding-top: 28px;
+}
+
+
+// ui/_pre-heading.scss
+// --------------------------------------------------------------------------
+
+.pre-heading.-alternate {
+
+  @extend %font--medium;
+  @include font-size(18px, false);
+  color: $text-medium;
+}
+
+
+// ui/_block-nav.scss
+// --------------------------------------------------------------------------
+
+.block-nav.-condensed {
+
+  .block-nav__img {
+    @include font-size(40px, false);
+  }
+
+  .block-nav__body {
+
+    h2 {
+      @include font-size (26px, true);
+    }
+  }
+}
+
+
+// ui/_panel.scss
+// --------------------------------------------------------------------------
+
+.panel.-condensed {
+  padding: 28px;
+
+  .panel__body {
+
+    li {
+      max-width: none;
+    }
+  }
 }
 
 

@@ -2612,7 +2612,7 @@
   font-family: 'adellesemibold';
   font-weight: normal; }
 
-.intro.-mega, .intro.-light, .block-link, .contact-panel h5, .landing-panel h3, .scroll-helper, .subscribe-header h3, .landing-panel.-sub-contact h5, .subscribe-footer {
+.intro.-mega, .intro.-light, .block-link, .pre-heading.-alternate, .contact-panel h5, .landing-panel h3, .scroll-helper, .subscribe-header h3, .landing-panel.-sub-contact h5, .subscribe-footer {
   font-family: 'bulomedium';
   font-weight: normal; }
 
@@ -2721,6 +2721,16 @@ img.circled {
     margin-right: 8px;
     color: #585856; }
 
+.feature-block.-centered .feature-block__body {
+  float: none;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.feature-block.-fom {
+  background: url("../images/festival-of-marketing-bg.png") center bottom no-repeat; }
+
 .checked-list.-greenery .checked-list__checkmark {
   color: #3dacaa; }
 .checked-list.-greenery .checked-list__item {
@@ -2747,6 +2757,24 @@ img.circled {
 
 .pod__body + .pod__body {
   padding-top: 28px; }
+
+.pre-heading.-alternate {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #585856; }
+
+.block-nav.-condensed .block-nav__img {
+  font-size: 40px;
+  font-size: 2.5rem; }
+.block-nav.-condensed .block-nav__body h2 {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.84615; }
+
+.panel.-condensed {
+  padding: 28px; }
+  .panel.-condensed .panel__body li {
+    max-width: none; }
 
 .action-card.-alt {
   background: #f7f6f2;
