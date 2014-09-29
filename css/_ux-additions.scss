@@ -4,7 +4,7 @@
 // --------------------------------------------------------------------------
 
 
-// _theme.scss
+// _theme.scss 
 // --------------------------------------------------------------------------
 
 img.circled {
@@ -35,6 +35,18 @@ img.circled {
   h5 {
     margin-bottom: 0;
   }
+}
+
+.alt-text {
+  @extend %font--medium;
+}
+
+.alt-text.-small {
+  @include font-size(14px, false);
+}
+
+hr.-light {
+  opacity: 0.5;
 }
 
 
@@ -124,7 +136,7 @@ img.circled {
 }
 
 .page-header-with-bg.-home-enterprise {
-  background-image: url('../images/home-header-bg2.jpg');
+  background-image: url('../images/home-header-bg.jpg');
 
   .page-header-with-bg__body {
     margin-top: 70px;
@@ -132,6 +144,14 @@ img.circled {
 
   h1 {
     @include font-size(52px, false);
+  }
+}
+
+.page-header-with-bg.-home-dt {
+  background-image: url('../images/dt-bg.jpg');
+
+  .page-header-with-bg__body {
+    margin-top: 70px;
   }
 }
 
@@ -145,6 +165,16 @@ img.circled {
 
   &:hover {
     background: lighten($brand-color, 10%);
+  }
+}
+
+.btn--tertiary {
+  background: $bg-white;
+  border-color: darken($bg-blue, 10%);
+  color: $text-medium;
+
+  &:hover {
+    background: darken($bg-blue, 10%);
   }
 }
 
@@ -176,12 +206,21 @@ img.circled {
 
   &:hover {
     text-decoration: none;
-    color: #fff;
+    color: $text-white;
   }
 
   i {
     margin-right: 8px;
   }
+}
+
+
+// ui/_chevron-list.scss [NEW]
+// --------------------------------------------------------------------------
+
+.chevron-list.-realigned {
+  text-align: left;
+  margin-top: 0;
 }
 
 
@@ -219,6 +258,22 @@ img.circled {
 
 .feature-block.-fom {
   background: url('../images/festival-of-marketing-bg.png') center bottom no-repeat;
+}
+
+
+// ui/_feature-icon.scss
+// --------------------------------------------------------------------------
+
+.feature-icon.-smaller i {
+  @include font-size(32px, false);
+}
+
+.feature-icon.-larger i {
+  @include font-size(50px, false);
+}
+
+.feature-icon.-inverted i {
+  color: $text-white;
 }
 
 
@@ -353,6 +408,33 @@ img.circled {
 }
 
 
+// ui/_image-with-caption.scss [NEW]
+// --------------------------------------------------------------------------
+
+.image-with-caption {
+
+  .image-with-caption__image {
+    border-radius: 4px 4px 0 0;
+    display: block;
+  }
+
+  .image-with-caption__caption {
+    @extend %font--medium;
+    @include font-size(14px, false);
+    display: block;
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+    background: $bg-dark;
+    color: $text-white;
+  }
+
+  &.-fixed {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+
 // ui/_contact-panel.scss [NEW]
 // --------------------------------------------------------------------------
 
@@ -400,6 +482,10 @@ img.circled {
 
 .contact-panel__body {
   padding: 20px;
+}
+
+.contact-panel__body.-realigned {
+  text-align: left;
 }
 
 .contact-panel__video {

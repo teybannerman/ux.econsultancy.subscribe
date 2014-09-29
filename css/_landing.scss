@@ -11,7 +11,7 @@
 
 .landing-panel {
 
-  padding: $gutter;
+  padding: ($gutter*1.5) $gutter $gutter;
   border-bottom: 1px solid $bg-medium;
   text-align: center;
 
@@ -77,15 +77,17 @@
   }
 }
 
-.landing-panel.-darkened {
+.landing-panel.-darkened, .landing-panel.-tertiary {
   background: $bg-dark;
+  border-bottom: none;
 
-  h1, h2, h4, p {
+  h1, h2, h4, h6 {
     color: $bg-white;
   }
 
   h3 {
     color: $bg-white;
+    margin-bottom: 12px;
   }
 
   p {
@@ -93,8 +95,31 @@
   }
 }
 
+.landing-panel.-tertiary {
+  background: $bg-blue;
+
+  p {
+    color: $bg-white;
+  }
+}
+
 .landing-panel.-home-subscribe {
   padding-top: 0;
+}
+
+.landing-panel.-compact {
+  
+  .icon-header {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-bottom: 8px;
+  }
+
+  .scroll-helper {
+    margin-top: 50px;
+  }
 }
 
 
@@ -195,4 +220,29 @@
       }
     }
   }
+}
+
+
+// @ LANDING-SPECIFIC ELEMENTS & COMPONENTS 
+// --------------------------------------------------------------------------
+
+.feature-circle {
+  border-radius: 50%;
+  color: $text-white;
+  padding: 30px 36px 0;
+  width: 250px;
+  height: 250px;
+  margin: 40px auto 0;
+}
+
+.feature-circle.-primary {
+  background: #2F99AD;
+}
+
+.feature-circle.-secondary {
+  background: #00AD65;
+}
+
+.feature-circle.-tertiary {
+  background: #C100CF;
 }

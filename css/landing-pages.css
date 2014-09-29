@@ -2612,7 +2612,7 @@
   font-family: 'adellesemibold';
   font-weight: normal; }
 
-.intro.-mega, .intro.-light, .block-link, .pre-heading.-alternate, .contact-panel h5, .landing-panel h3, .scroll-helper, .subscribe-header h3, .landing-panel.-sub-contact h5, .subscribe-footer {
+.alt-text, .intro.-mega, .intro.-light, .block-link, .pre-heading.-alternate, .image-with-caption .image-with-caption__caption, .contact-panel h5, .landing-panel h3, .scroll-helper, .subscribe-header h3, .landing-panel.-sub-contact h5, .subscribe-footer {
   font-family: 'bulomedium';
   font-weight: normal; }
 
@@ -2640,6 +2640,13 @@ img.circled {
 
 .compact h5 {
   margin-bottom: 0; }
+
+.alt-text.-small {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+hr.-light {
+  opacity: 0.5; }
 
 .content-standard.-homepage {
   padding-top: 40px; }
@@ -2681,18 +2688,30 @@ img.circled {
     color: #fff; }
 
 .page-header-with-bg.-home-enterprise {
-  background-image: url("../images/home-header-bg2.jpg"); }
+  background-image: url("../images/home-header-bg.jpg"); }
   .page-header-with-bg.-home-enterprise .page-header-with-bg__body {
     margin-top: 70px; }
   .page-header-with-bg.-home-enterprise h1 {
     font-size: 52px;
     font-size: 3.25rem; }
 
+.page-header-with-bg.-home-dt {
+  background-image: url("../images/dt-bg.jpg"); }
+  .page-header-with-bg.-home-dt .page-header-with-bg__body {
+    margin-top: 70px; }
+
 .btn--secondary {
   background: #ed0015;
   border-color: #ba0010; }
   .btn--secondary:hover {
     background: #ff2135; }
+
+.btn--tertiary {
+  background: white;
+  border-color: #1f5b89;
+  color: #585856; }
+  .btn--tertiary:hover {
+    background: #1f5b89; }
 
 .btn--large {
   font-size: 18px;
@@ -2712,9 +2731,13 @@ img.circled {
     background: #939b6e; }
   .block-link:hover {
     text-decoration: none;
-    color: #fff; }
+    color: white; }
   .block-link i {
     margin-right: 8px; }
+
+.chevron-list.-realigned {
+  text-align: left;
+  margin-top: 0; }
 
 .icon-list {
   list-style: none; }
@@ -2735,6 +2758,17 @@ img.circled {
 
 .feature-block.-fom {
   background: url("../images/festival-of-marketing-bg.png") center bottom no-repeat; }
+
+.feature-icon.-smaller i {
+  font-size: 32px;
+  font-size: 2rem; }
+
+.feature-icon.-larger i {
+  font-size: 50px;
+  font-size: 3.125rem; }
+
+.feature-icon.-inverted i {
+  color: white; }
 
 .checked-list.-greenery .checked-list__checkmark {
   color: #3dacaa; }
@@ -2794,6 +2828,21 @@ img.circled {
   .action-card.-alt:hover .media-flex__img {
     color: #2f76ac; }
 
+.image-with-caption .image-with-caption__image {
+  border-radius: 4px 4px 0 0;
+  display: block; }
+.image-with-caption .image-with-caption__caption {
+  font-size: 14px;
+  font-size: 0.875rem;
+  display: block;
+  border-radius: 0 0 4px 4px;
+  padding: 10px;
+  background: #3c3c3c;
+  color: white; }
+.image-with-caption.-fixed {
+  max-width: 300px;
+  margin: 0 auto; }
+
 .contact-panel {
   background: #fff;
   border: 1px solid #ddd;
@@ -2827,6 +2876,9 @@ img.circled {
 .contact-panel__body {
   padding: 20px; }
 
+.contact-panel__body.-realigned {
+  text-align: left; }
+
 .contact-panel__video {
   position: relative; }
   .contact-panel__video img {
@@ -2851,7 +2903,7 @@ img.circled {
       left: 21px; }
 
 .landing-panel {
-  padding: 36px;
+  padding: 54px 36px 36px;
   border-bottom: 1px solid #e7e7e7;
   text-align: center; }
   .landing-panel.-buffer {
@@ -2892,17 +2944,31 @@ img.circled {
     margin-top: 32px;
     margin-bottom: 0; }
 
-.landing-panel.-darkened {
-  background: #3c3c3c; }
-  .landing-panel.-darkened h1, .landing-panel.-darkened h2, .landing-panel.-darkened h4, .landing-panel.-darkened p {
+.landing-panel.-darkened, .landing-panel.-tertiary {
+  background: #3c3c3c;
+  border-bottom: none; }
+  .landing-panel.-darkened h1, .landing-panel.-darkened h2, .landing-panel.-darkened h4, .landing-panel.-darkened h6, .landing-panel.-tertiary h1, .landing-panel.-tertiary h2, .landing-panel.-tertiary h4, .landing-panel.-tertiary h6 {
     color: white; }
-  .landing-panel.-darkened h3 {
-    color: white; }
-  .landing-panel.-darkened p {
+  .landing-panel.-darkened h3, .landing-panel.-tertiary h3 {
+    color: white;
+    margin-bottom: 12px; }
+  .landing-panel.-darkened p, .landing-panel.-tertiary p {
     color: #999999; }
+
+.landing-panel.-tertiary {
+  background: #2976b2; }
+  .landing-panel.-tertiary p {
+    color: white; }
 
 .landing-panel.-home-subscribe {
   padding-top: 0; }
+
+.landing-panel.-compact .icon-header {
+  margin-bottom: 0; }
+.landing-panel.-compact h3 {
+  margin-bottom: 8px; }
+.landing-panel.-compact .scroll-helper {
+  margin-top: 50px; }
 
 .huge-icon {
   font-size: 4em;
@@ -2955,6 +3021,23 @@ img.circled {
       margin-left: 0; }
     .client-logos.-eight-row li:nth-child(4n+4) {
       margin-right: 0; } }
+
+.feature-circle {
+  border-radius: 50%;
+  color: white;
+  padding: 30px 36px 0;
+  width: 250px;
+  height: 250px;
+  margin: 40px auto 0; }
+
+.feature-circle.-primary {
+  background: #2F99AD; }
+
+.feature-circle.-secondary {
+  background: #00AD65; }
+
+.feature-circle.-tertiary {
+  background: #C100CF; }
 
 .subscribe-navbar {
   position: fixed;
