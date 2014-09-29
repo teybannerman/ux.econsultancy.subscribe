@@ -246,3 +246,31 @@
 .feature-circle.-tertiary {
   background: #C100CF;
 }
+
+.arrow-after {
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 32px;
+    height: 27px;
+    background-image:url('../images/arrow-rounded.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 64px;
+    right: -20px;
+  }
+
+  @include media-query(lap) {
+    margin-bottom: 40px;
+
+    &:after {
+      width: 27px;
+      height: 32px;
+      background-image:url('../images/arrow-rounded-down.png');
+      top: auto;
+      bottom: -22px;
+      left: 50%;
+    }
+  }
+}

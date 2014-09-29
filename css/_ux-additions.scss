@@ -45,6 +45,10 @@ img.circled {
   @include font-size(14px, false);
 }
 
+.alt-text.-fixed120 {
+  height: 120px;
+}
+
 hr.-light {
   opacity: 0.5;
 }
@@ -152,6 +156,51 @@ hr.-light {
 
   .page-header-with-bg__body {
     margin-top: 70px;
+  }
+}
+
+
+// ui/media/_media-flex-featurebox.scss [NEW]
+// --------------------------------------------------------------------------
+
+.media-flex.-featurebox {
+  padding: 0 18px;
+  height: 120px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+
+  .media-flex__img {
+    @include font-size(32px, false);
+  }
+
+  .media-flex__body {
+    @include font-size(14px, false);
+    text-align: left;
+  }
+
+  h5 {
+    @extend %font--medium;
+    @include font-size(18px, false);
+    margin-bottom: 0;
+    color: $text-white;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &.-primary {
+    background: #2F99AD;
+  }
+
+  &.-secondary {
+    background: #292B2B;
+  }
+
+  &.-tertiary {
+    background: #BB000D;
   }
 }
 

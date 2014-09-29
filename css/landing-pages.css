@@ -2612,7 +2612,7 @@
   font-family: 'adellesemibold';
   font-weight: normal; }
 
-.alt-text, .intro.-mega, .intro.-light, .block-link, .pre-heading.-alternate, .image-with-caption .image-with-caption__caption, .contact-panel h5, .landing-panel h3, .scroll-helper, .subscribe-header h3, .landing-panel.-sub-contact h5, .subscribe-footer {
+.alt-text, .intro.-mega, .intro.-light, .media-flex.-featurebox h5, .block-link, .pre-heading.-alternate, .image-with-caption .image-with-caption__caption, .contact-panel h5, .landing-panel h3, .scroll-helper, .subscribe-header h3, .landing-panel.-sub-contact h5, .subscribe-footer {
   font-family: 'bulomedium';
   font-weight: normal; }
 
@@ -2644,6 +2644,9 @@ img.circled {
 .alt-text.-small {
   font-size: 14px;
   font-size: 0.875rem; }
+
+.alt-text.-fixed120 {
+  height: 120px; }
 
 hr.-light {
   opacity: 0.5; }
@@ -2699,6 +2702,34 @@ hr.-light {
   background-image: url("../images/dt-bg.jpg"); }
   .page-header-with-bg.-home-dt .page-header-with-bg__body {
     margin-top: 70px; }
+
+.media-flex.-featurebox {
+  padding: 0 18px;
+  height: 120px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: #222;
+  color: #fff; }
+  .media-flex.-featurebox .media-flex__img {
+    font-size: 32px;
+    font-size: 2rem; }
+  .media-flex.-featurebox .media-flex__body {
+    font-size: 14px;
+    font-size: 0.875rem;
+    text-align: left; }
+  .media-flex.-featurebox h5 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-bottom: 0;
+    color: white; }
+  .media-flex.-featurebox p {
+    margin-bottom: 0; }
+  .media-flex.-featurebox.-primary {
+    background: #2F99AD; }
+  .media-flex.-featurebox.-secondary {
+    background: #292B2B; }
+  .media-flex.-featurebox.-tertiary {
+    background: #BB000D; }
 
 .btn--secondary {
   background: #ed0015;
@@ -3038,6 +3069,28 @@ hr.-light {
 
 .feature-circle.-tertiary {
   background: #C100CF; }
+
+.arrow-after {
+  position: relative; }
+  .arrow-after:after {
+    content: '';
+    width: 32px;
+    height: 27px;
+    background-image: url("../images/arrow-rounded.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 64px;
+    right: -20px; }
+  @media only screen and (min-width: 600px) and (max-width: 989px) {
+    .arrow-after {
+      margin-bottom: 40px; }
+      .arrow-after:after {
+        width: 27px;
+        height: 32px;
+        background-image: url("../images/arrow-rounded-down.png");
+        top: auto;
+        bottom: -22px;
+        left: 50%; } }
 
 .subscribe-navbar {
   position: fixed;
